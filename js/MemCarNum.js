@@ -157,7 +157,7 @@ window.onload = function() {
     });
 
     // 关闭键盘
-    $("#container").click(function () {
+    $("#register").click(function () {
         closePro();
     });
 }

@@ -43,6 +43,9 @@ input[type='text'],input[type='date'],select {
     color: #575757;
     background-color: white;
 }
+input[type='text'],input[type='date']{
+    padding-left: 4px;
+}
 .phone{
     width: 50%!important;
 }

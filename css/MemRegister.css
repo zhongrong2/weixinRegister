@@ -32,7 +32,7 @@ body{
     line-height: 0.6rem;
     float: left;
 }
-input[type='text'],input[type='date'],select {
+input[type='number'],input[type='text'],select {
     width: 75%;
     height: 0.6rem;
     outline: none;
@@ -43,8 +43,9 @@ input[type='text'],input[type='date'],select {
     color: #575757;
     background-color: white;
 }
-input[type='text'],input[type='date']{
-    padding-left: 4px;
+select{
+    -webkit-appearance: none;
+    background-color:transparent;
 }
 .phone{
     width: 50%!important;

@@ -1,4 +1,7 @@
 $(function () {
+    new Mdate("dateSelectorOne");
+
+
     // 判断必填项不为空
     $(".sumbit").click(function () {
         var phone = $('#phone').val();

@@ -29,14 +29,14 @@
     <ul class="RequiredInfo">
         <li>
             <span>手机号</span>
-            <input id="phone" class="phone" type="text" placeholder="请输入手机号（必填）" autocomplete="off" maxlength="11">
+            <input id="phone" class="phone" type="number" placeholder="请输入手机号（必填）" autocomplete="off" maxlength="11">
             <div class="codeBox">
                 <span class="sendCode" id="btnSendCode1" onclick="sendMessage1()">获取验证码</span>
             </div>
         </li>
         <li>
             <span>验证码</span>
-            <input id="code" type="text" placeholder="请输入验证码（必填）" autocomplete="off">
+            <input id="code" type="number" placeholder="请输入验证码（必填）" autocomplete="off">
         </li>
         <li>
             <span>车辆类型</span>
@@ -60,7 +60,7 @@
         </li>
         <li>
             <span>出生日期</span>
-            <input id="birthday" type="date" placeholder="请选择出生日期" autocomplete="off">
+            <input id="dateSelectorOne" type="text" placeholder="请选择出生日期" autocomplete="off">
         </li>
         <li>
             <span>车牌号2</span>
@@ -81,6 +81,8 @@
 <!--注册信息结束-->
 </body>
 
+<script src="Mdate/iScroll.js"></script>
+<script src="Mdate/Mdate.js"></script>
 <script src="js/sendCode.js"></script>
 <script src="layer_mobile/layer.js"></script>
 <script src="js/MemCarNum.js"></script>

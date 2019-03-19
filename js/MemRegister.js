@@ -1,4 +1,8 @@
 $(function () {
+    // 取消光标
+    $("#dateSelectorOne").focus(function(){
+        document.activeElement.blur();
+    });
     new Mdate("dateSelectorOne");
 
 

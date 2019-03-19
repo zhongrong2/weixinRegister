@@ -3,14 +3,58 @@ $(function () {
     $("#dateSelectorOne").focus(function(){
         document.activeElement.blur();
     });
+    $("#CarClass").focus(function(){
+        document.activeElement.blur();
+    });
+
+    //出生日期
     new Mdate("dateSelectorOne");
 
+    //选择车辆类型
+    $("#CarClass").click(function (e) {
+        $("#shade").css("display","block");
+        $(".ClassBox").animate({
+            bottom:0,
+        },200)
+        e.stopPropagation();
+    })
+    // 选择类型
+    $(".carclass").click(function (e) {
+        var carclass = $(this).html();
+        var data = $(this).attr("data");
+        console.log(carclass,data);
+        $("#CarClass").val(carclass);
+
+        $("#shade").css("display","none");
+        $(".ClassBox").animate({
+            bottom:-300,
+        },200)
+        e.stopPropagation();
+    })
+    //点击关闭
+    $("#shade").click(function (e) {
+        $(this).css("display","none");
+        close(e);
+    });
+    $(".close").each(function () {
+        $(this).click(function (e) {
+            $("#shade").css("display","none");
+            close(e);
+        })
+    })
+    function close(e) {
+        //关闭
+        $(".ClassBox").animate({
+            bottom:-300,
+        },200)
+        e.stopPropagation();
+    }
 
     // 判断必填项不为空
     $(".sumbit").click(function () {
         var phone = $('#phone').val();
         var code = $("#code").val();
-        var carClass = $("#CarClass option:selected").val();
+        var carClass = $("#CarClass").val();
         var carNum1 = $("#carnum1").val();
         var date = $("#birthday").val();
         var carNum2 = $("#carnum2").val();
@@ -35,7 +79,7 @@ $(function () {
             return false;
         }
         //判断车辆类型不为空
-        if (carClass === "0"){
+        if (carClass.length == 0){
             $.myToast("请选择车辆类型");
             return false;
         }
